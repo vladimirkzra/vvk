@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public bool isItLeft;
-    public bool isItUp;
-    byte speed = 15;
-    
+    public GameObject bullet_;
+    public GameObject plr;
+    byte speed = 100;
+    private Vector3 lookV;
+    public Camera cam;
+
+    private void Start()
+    {
+        StartCoroutine(del());
+    }
+
+    IEnumerator del()
+    {
+        yield return new WaitForSeconds(10);
+        Destroy(bullet_);
+    }
+
+    public void shoot(Vector2 v)
+    {
+        plr = GameObject.FindGameObjectWithTag("Player");
+        Vector3 pos = Vector3.ClampMagnitude(new Vector3(Screen.width / 2 - v.x, Screen.height / 2 - v.y, 0), 1);
+        print(pos);
+        lookV = pos;
+    }
+
     void Update()
     {
-        if (isItLeft)
-        {
-            gameObject.transform.position -= new Vector3(speed*Time.deltaTime,0);
-        }
-        if (!isItLeft)
-        {
-            gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0);
-        }
-        
+        if (lookV == null) return;
+        gameObject.transform.position -= lookV / speed;
     }
 }

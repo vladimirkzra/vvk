@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 227842117}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4156,7 +4156,7 @@ GameObject:
   - component: {fileID: 334473742}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4303,6 +4303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5191914244267411815, guid: 6f6f0f4209cb30549a9a30c500b23ced, type: 3}
+  cam: {fileID: 112865853}
 --- !u!114 &334473743
 MonoBehaviour:
   m_ObjectHideFlags: 0

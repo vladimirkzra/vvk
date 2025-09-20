@@ -144,3 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItLeft: 0
+  isItUp: 0
+  bullet_: {fileID: 5191914244267411815}
