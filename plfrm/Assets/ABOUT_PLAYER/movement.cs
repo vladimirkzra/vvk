@@ -21,12 +21,9 @@ rb = GetComponent<Rigidbody2D>();
         {
             rb.AddForce(new Vector2(0, jmp), ForceMode2D.Impulse);
         }
-        
-    }
-    private void FixedUpdate()
-    {
+
         float horizontalinput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(horizontalinput * speed,rb.velocity.y);
+        rb.velocity = new Vector2(horizontalinput * speed, rb.velocity.y);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
