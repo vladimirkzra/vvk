@@ -6,7 +6,7 @@ public class bullet : MonoBehaviour
 {
     public GameObject bullet_;
     public GameObject plr;
-    byte speed = 100;
+    int speed = 10;
     private Vector3 lookV;
     public Camera cam;
 
