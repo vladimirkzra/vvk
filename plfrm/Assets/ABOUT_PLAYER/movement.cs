@@ -20,6 +20,7 @@ rb = GetComponent<Rigidbody2D>();
         if (Input.GetKeyDown(KeyCode.Space)&&isgrounded)
         {
             rb.AddForce(new Vector2(0, jmp), ForceMode2D.Impulse);
+
         }
 
         float horizontalinput = Input.GetAxis("Horizontal");
