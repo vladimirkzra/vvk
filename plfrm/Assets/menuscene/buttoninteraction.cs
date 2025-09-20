@@ -18,6 +18,6 @@ public class buttoninteraction : MonoBehaviour
     }
     public void pressit()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("game");
     }
 }

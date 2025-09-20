@@ -5,7 +5,6 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public GameObject bullet_;
-    public GameObject plr;
     int speed = 10;
     private Vector3 lookV;
     public Camera cam;
@@ -23,7 +22,6 @@ public class bullet : MonoBehaviour
 
     public void shoot(Vector2 v)
     {
-        plr = GameObject.FindGameObjectWithTag("Player");
         Vector3 pos = Vector3.ClampMagnitude(new Vector3(Screen.width / 2 - v.x, Screen.height / 2 - v.y, 0), 1);
         print(pos);
         lookV = pos;

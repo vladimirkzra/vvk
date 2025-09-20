@@ -1,4 +1,4 @@
-using System.Collections;
+        using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,5 @@ public class alien_sp : MonoBehaviour
             Instantiate(alienPrefab, spawners[Random.Range(0,spawners.Length)].transform.position,Quaternion.identity);
 
         }
-        
-
     }
 }

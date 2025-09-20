@@ -1,12 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
     public int hp = 100;
     public int maxhp = 100;
     public GameObject hpLine;
+    public TMP_Text hpText;
     private void Start()
     {
         StartCoroutine(regenHp());
@@ -20,6 +22,7 @@ public class PlayerStats : MonoBehaviour
             if (hp < maxhp)
             {
                 hp += 1;
+                UpdateHP();
             }
 
         }
@@ -38,7 +41,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (hp < maxhp)
         {
-            hpLine.transform.localScale = new Vector3(hp/maxhp, 0.1f, 0);
+            hpText.text = hp.ToString();
+            if (hp <= 0)
+            {
+                SceneManager.LoadScene("menu");
+            }
         }
     }
 }
